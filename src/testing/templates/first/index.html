@@ -1,0 +1,14 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel='stylesheet' href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1>Hallo this is index.html</h1>
+    <p>This is our variable: {{ variable }}</p>
+    <img src="{% static 'images/room.bmp' %}" alt="Didn't show">
+</body>
+</html>

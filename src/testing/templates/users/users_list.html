@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/users.css' %}">
+</head>
+<body>
+    <h1>Our Clients: </h1>
+    <ul>
+        <li><a href="{% url 'users:fill_form' %}">ADD CLIENTS</a></li>
+        <li><a href="{% url 'users:fill_form_model' %}">ADD CLIENTS MODEL</a></li>
+    </ul>
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Second Name</th>
+            <th>email</th>
+        </thead>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.name }}</td>
+                <td>{{ user.second_name }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
